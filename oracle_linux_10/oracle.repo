@@ -1,0 +1,91 @@
+[ol10_baseos_latest]
+name=Oracle Linux 10 BaseOS Latest ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/baseos/latest/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=1
+
+[ol10_appstream]
+name=Oracle Linux 10 Application Stream Packages ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/appstream/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=1
+
+[ol10_u0_baseos_base]
+name=Oracle Linux 10 BaseOS GA ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/0/baseos/base/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_u1_baseos_base]
+name=Oracle Linux 10.1 BaseOS ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/1/baseos/base/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_u2_baseos_base]
+name=Oracle Linux 10.2 BaseOS ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/2/baseos/base/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_u3_baseos_base]
+name=Oracle Linux 10.3 BaseOS ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/3/baseos/base/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_u4_baseos_base]
+name=Oracle Linux 10.4 BaseOS ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/4/baseos/base/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_u5_baseos_base]
+name=Oracle Linux 10.5 BaseOS ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/5/baseos/base/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_addons]
+name=Oracle Linux 10 Addons ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/addons/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_codeready_builder]
+name=Oracle Linux 10 CodeReady Builder ($basearch) - (Unsupported)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/codeready/builder/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_distro_builder]
+name=Oracle Linux 10 Distro Builder ($basearch) - (Unsupported)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/distro/builder/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
+
+[ol10_MODRHCK]
+name=Latest RHCK with fixes from Oracle for Oracle Linux $releasever ($basearch)
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/MODRHCK/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+priority=20
+enabled=0
+
+[ol10_u3_security_validation]
+name=Oracle Linux $releasever Update 3 ($basearch) Security Validations
+baseurl=https://yum.oracle.com/repo/OracleLinux/OL10/3/security/validation/$basearch/
+gpgkey=https://yum.oracle.com/RPM-GPG-KEY-oracle-ol10
+gpgcheck=1
+enabled=0
