@@ -1,0 +1,19 @@
+[Exec]
+Boot=true
+PrivateUsers=no
+Hostname=rhel10-ubi
+#Capability=CAP_NET_ADMIN CAP_NET_RAW
+
+[Network]
+Private=no
+VirtualEthernet=no
+
+[Files]
+# Adds bind mounts from the host into the systemd-container.
+# Takes a single path, a pair of two paths separated by a colon,
+# or a triplet of two paths plus an option string separated by colons.
+# /singlepath
+# /pathhere:/paththere
+# /pathhere:/paththere:options
+#Bind=...:...
+#BindReadOnly=...:...
