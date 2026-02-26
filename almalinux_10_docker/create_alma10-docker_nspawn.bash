@@ -42,9 +42,9 @@ Before=network-online.target
 [Service]
 Type=exec
 #Type=oneshot
-ExecStartPre=/bin/echo 'trying to bring interface host0 up...'
+ExecStartPre=/bin/bash -c '/bin/echo "trying to bring interface host0 up..."| systemd-cat -t "%N"'
 ExecStartPre=/sbin/ip link set dev host0 up
-ExecStartPre=/bin/bash -c 'if /bin/cat /sys/devices/virtual/net/host0/carrier >/dev/null 2>&1; then /bin/echo "host0 is up";else /bin/echo "host0 is down";fi'
+ExecStartPre=/bin/bash -c 'if /bin/cat /sys/devices/virtual/net/host0/carrier >/dev/null 2>&1; then /bin/echo "host0 is up";else /bin/echo "host0 is down";fi | systemd-cat -t "%N"'
 ExecStart=/usr/sbin/dhcpcd -d --noarp -b host0
 RemainAfterExit=yes
 
