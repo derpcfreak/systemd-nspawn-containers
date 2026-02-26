@@ -44,7 +44,7 @@ Type=exec
 #Type=oneshot
 ExecStartPre=/bin/echo 'trying to bring interface host0 up...'
 ExecStartPre=/sbin/ip link set dev host0 up
-ExecStartPre=/bin/bash -c 'if \$(cat /sys/devices/virtual/net/host0/carrier >/dev/null 2>&1); then /bin/echo "up";else /bin/echo "down";fi'
+ExecStartPre=/bin/bash -c 'if /bin/cat /sys/devices/virtual/net/host0/carrier >/dev/null 2>&1; then /bin/echo "up";else /bin/echo "down";fi'
 ExecStart=/usr/sbin/dhcpcd -d --noarp -b host0
 RemainAfterExit=yes
 
