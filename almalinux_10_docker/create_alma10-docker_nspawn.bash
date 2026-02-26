@@ -17,6 +17,16 @@ systemd-nspawn --quiet --settings=false -D /var/lib/machines/alma10-docker/ /bin
 systemd-nspawn --quiet --settings=false -D /var/lib/machines/alma10-docker/ /bin/bash -c "ln -s '/usr/lib/systemd/system/docker.socket' '/etc/systemd/system/multi-user.target.wants/docker.socket'"
 #systemd-nspawn --quiet --settings=false -D /var/lib/machines/alma10-docker/ /bin/bash -c "ln -s '/usr/lib/systemd/system/docker.service' '/etc/systemd/system/multi-user.target.wants/docker.service'"
 
+# the configuration below for dockerd is needed since systemd-nspawn or the file system
+# could lag some capabilities.
+cat <<-EOF > '/var/lib/machines/alma10-docker/etc/docker/daemon.json'
+{
+  "features": {
+    "containerd-snapshotter": false
+  }
+}
+EOF
+
 # copy nspawn file in place
 mkdir -p /etc/systemd/nspawn 2>/dev/null
 cp alma10-docker.nspawn /etc/systemd/nspawn
